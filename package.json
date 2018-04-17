@@ -1,0 +1,29 @@
+{
+  "name": "Database-Project-Bonus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "nodemon ./bin/www" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dingwilson/Database-Project-Bonus.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dingwilson/Database-Project-Bonus/issues"
+  },
+  "homepage": "https://github.com/dingwilson/Database-Project-Bonus#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "expres": "0.0.5",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  }
+}
