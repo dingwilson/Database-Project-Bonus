@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+
 const { Pool, Client } = require('pg')
 
 const client = new Client({
@@ -11,61 +12,55 @@ const client = new Client({
 });
 client.connect();
 app.get('/', function(req,res){
-	res.send('Hello World! :D');
+	console.log('Home');
+	res.write('Hello World! :D');
+	res.end();
+
 });
 
 app.get('/items',function(req,res){
-client.query('SELECT * FROM items', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM items', (err,response) => {
+    res.send('Items Page\n' + JSON.stringify(response.fields));
 });
-res.send('Items Page');
 });
 
 app.get('/characters',function(req,res){
-client.query('SELECT * FROM characters', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM characters', (err,response) => {
+	res.send('Characters Page\n' + JSON.stringify(response.fields));
 });
-res.send('Characters Page');
 });
 
 app.get('/backpacks',function(req,res){
-client.query('SELECT * FROM backpacks', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM backpacks', (err,response) => {
+	res.send('Backpacks Page\n' + JSON.stringify(response.fields));
 });
-res.send('Backpacks Page');
 });
 
 app.get('/spells',function(req,res){
-client.query('SELECT * FROM spells', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM spells', (err,response) => {
+	res.send('Spells Page\n' + JSON.stringify(response.fields));
 });
-res.send('Spells Page');
 });
 
 app.get('/races',function(req,res){
-client.query('SELECT * FROM races', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM races', (err,response) => {
+	res.send('Races Page\n' + JSON.stringify(response.fields));
 });
-res.send('Races Page');
 });
 
 
 app.get('/classes',function(req,res){
-client.query('SELECT * FROM classes', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM classes', (err,response) => {
+	res.send('Classes Page\n' + JSON.stringify(response.fields));
 });
-res.send('Classes Page');
 });
 
 app.get('/equipped',function(req,res){
-client.query('SELECT * FROM equipped', (err,res) => {
-    console.log(JSON.stringify(res.fields));
+client.query('SELECT * FROM equipped', (err,response) => {
+	res.send('Equipped Page\n'+ JSON.stringify(response.fields));
 });
-res.send('Equipped Page');
 });
 
 var server = app.listen(3000, function() {
-	console.log('Express is listening to http://localhost:3000');
-	});
-
-
+    console.log('Express is listening to http://localhost:3000');
+    });
