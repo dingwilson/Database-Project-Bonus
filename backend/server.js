@@ -19,37 +19,37 @@ app.get('/', function(req,res){
 });
 
 app.get('/items',function(req,res){
-client.query('SELECT * FROM items', (err,response) => {
+client.query("SELECT * FROM items WHERE item_type='hand'", (err,response) => {
     	console.log(response);
-    	res.send('Items Page\n' + JSON.stringify(response.fields));
+    	res.send(JSON.stringify(response.rows));
 });
 });
 
 app.get('/characters',function(req,res){
 client.query('SELECT * FROM characters', (err,response) => {
     	console.log(response);
-	res.send('Characters Page\n' + JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
 app.get('/backpacks',function(req,res){
 client.query('SELECT * FROM backpacks', (err,response) => {
     	console.log(response);
-	res.send('Backpacks Page\n' + JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
 app.get('/spells',function(req,res){
 client.query('SELECT * FROM spells', (err,response) => {
     	console.log(response);
-	res.send('Spells Page\n' + JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
 app.get('/races',function(req,res){
 client.query('SELECT * FROM races', (err,response) => {
     	console.log(response);
-	res.send('Races Page\n' + JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
@@ -57,17 +57,17 @@ client.query('SELECT * FROM races', (err,response) => {
 app.get('/classes',function(req,res){
 client.query('SELECT * FROM classes', (err,response) => {
     	console.log(response);
-	res.send('Classes Page\n' + JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
 app.get('/equipped',function(req,res){
 client.query('SELECT * FROM equipped', (err,response) => {
     	console.log(response);
-	res.send('Equipped Page\n'+ JSON.stringify(response.fields));
+	res.send(JSON.stringify(response.rows));
 });
 });
 
 var server = app.listen(3000, function() {
     console.log('Express is listening to http://localhost:3000');
-    });
+});
