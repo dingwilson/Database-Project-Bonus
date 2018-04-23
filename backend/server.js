@@ -137,7 +137,7 @@ Race Endpoint
 */
 app.get('/races',function(req,res){
 client.query(logger('SELECT * FROM races'), (err,response) => {
-    	console.log(response);
+    	//logger(response);
   	res.setHeader('Content-Type', 'application/json');
 	res.json(response.rows);
 });
@@ -211,7 +211,7 @@ function logger(data){
 d = new Date();
 let log = "\n---------------------------------------------------------\n" + d.toLocaleString() + "\n" + data;
 console.log(log);
-fs.appendFile(__dirname + "/server.log", log);
+//fs.appendFile(__dirname + "/server.log", log);
 return data;
 };
 
