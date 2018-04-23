@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+const fs = require('fs');
 
 const { Pool, Client } = require('pg')
 
@@ -29,7 +30,7 @@ app.get('/items',function(req,res){
 client.query(logger("SELECT * FROM items"), (err,response) => {
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-    res.send(JSON.stringify(response.rows));
+    	res.json(response.rows);
 });
 });
 
@@ -38,7 +39,7 @@ let sql = 'SELECT * FROM items WHERE item_id=' + req.params.id;
 client.query(logger(sql), (err,response) => {
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
@@ -51,7 +52,7 @@ app.get('/characters',function(req,res){
 client.query(logger('SELECT * FROM characters'), (err,response) => {
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
@@ -60,7 +61,7 @@ let sql = 'SELECT * FROM characters WHERE char_id=' + req.params.id;
 client.query(logger(sql), (err,response) => {
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 /*
@@ -72,8 +73,8 @@ Backpack Endpoint
 app.get('/backpacks',function(req,res){
 client.query(logger('SELECT * FROM backpacks'), (err,response) => {
     	//logger(response);
-    res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.setHeader('Content-Type', 'application/json');
+	res.json(response.rows);
 });
 });
 
@@ -82,7 +83,7 @@ let sql = 'SELECT * FROM backpacks WHERE char_id=' + req.params.id;
 client.query(logger(sql), (err,response) => {
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 /*
@@ -95,8 +96,8 @@ Spell Endpoint
 app.get('/spells',function(req,res){
 client.query(logger('SELECT * FROM spells'), (err,response) => {
     	//logger(response);
-    res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.setHeader('Content-Type', 'application/json');
+	res.json(response.rows);
 });
 });
 
@@ -105,7 +106,7 @@ let sql = 'SELECT * FROM spells WHERE spell_id='+req.params.id;
 client.query(logger(sql), (err, response) => {
 	//logger(response)
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
@@ -114,7 +115,7 @@ let sql = 'SELECT * FROM spells where class_id='+req.params.id;
 client.query(logger(sql), (err, response) => {
 	//logger(response)
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
@@ -124,7 +125,7 @@ let sql = 'SELECT * FROM spells where race_id='+req.params.id;
 client.query(logger(sql), (err, response) => {
 	//logger(response)
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
@@ -137,8 +138,8 @@ Race Endpoint
 app.get('/races',function(req,res){
 client.query(logger('SELECT * FROM races'), (err,response) => {
     	console.log(response);
-    res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+  	res.setHeader('Content-Type', 'application/json');
+	res.json(response.rows);
 });
 });
 
@@ -147,9 +148,9 @@ let sql = 'SELECT * FROM characters where race_id='+req.params.id;
 client.query(logger(sql), (err, response) => {
 	//logger(response)
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
-});
+class_id});
 
 
 /*
@@ -161,8 +162,8 @@ Class Endpoint
 app.get('/classes',function(req,res){
 client.query(logger('SELECT * FROM classes'), (err,response) => {
     	//logger(response);
-    res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.setHeader('Content-Type', 'application/json');
+	res.json(response.rows);
 });
 });
 
@@ -171,21 +172,21 @@ let sql = 'SELECT * FROM characters WHERE class_id='+req.params.id;
 client.query(logger(sql), (err,response)=>{
 	//logger(response);
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
 /*
 --------------------------------------------------------
-Equipped Endpoint
+Equipped Endpoass_idnt
 '/equipped/:id' returns equipped items for character
 --------------------------------------------------------
 */
 app.get('/equipped',function(req,res){
 client.query(logger('SELECT * FROM equipped'), (err,response) => {
     	//logger(response);
-    res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+    	res.setHeader('Content-Type', 'application/json');
+	res.json(response.rows);
 });
 });
 
@@ -194,11 +195,11 @@ let sql = 'SELECT * FROM equipped WHERE char_id='+req.params.id;
 client.query(logger(sql), (err, response) => {
 	//logger(response)
 	res.setHeader('Content-Type', 'application/json');
-	res.send(JSON.stringify(response.rows));
+	res.json(response.rows);
 });
 });
 
-var server = app.listen(process.env.PORT || 5000, function() {
+var server = app.listen(process.env.PORT || 3000, function() {
 	if(process.env.PORT != null) {
 		console.log('Express is listening to ' + process.env.PORT);
 	} else {
@@ -208,9 +209,9 @@ var server = app.listen(process.env.PORT || 5000, function() {
 
 function logger(data){
 d = new Date();
-console.log("---------------------------------------------------------");
-console.log(d.toLocaleString());
-console.log(data);
+let log = "\n---------------------------------------------------------\n" + d.toLocaleString() + "\n" + data;
+console.log(log);
+fs.appendFile(__dirname + "/server.log", log);
 return data;
 };
 

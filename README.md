@@ -15,9 +15,9 @@ Avaliable Endpoints
 '/spells/class/:class_id' - returns all spells for class
 '/spells/race/:race_id' - returns all spells for race
 '/races' - returns all races
-'/races/:race_id/ - returns race with id
+'/races/:race_id/ - returns characters of race id 
 '/classes' - return all classes
-'/classes/:class_id' - return class with id
+'/classes/:class_id' - return characters with class id
 '/equipped' - returns all equipped data
 '/equipped/:char_id' - returns equipped items for character
 
