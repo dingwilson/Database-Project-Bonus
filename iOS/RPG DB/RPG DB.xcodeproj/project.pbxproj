@@ -12,6 +12,7 @@
 		C85C3E00208BC94100EBA1A6 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C3DFF208BC94100EBA1A6 /* NetworkingService.swift */; };
 		C85C3E02208BCA9D00EBA1A6 /* DetailedCharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C3E01208BCA9D00EBA1A6 /* DetailedCharacterViewController.swift */; };
 		C85C3E04208BCC1E00EBA1A6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C3E03208BCC1E00EBA1A6 /* Character.swift */; };
+		C85C3E07208E681800EBA1A6 /* Super Mario World Text Box.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C85C3E06208E681700EBA1A6 /* Super Mario World Text Box.ttf */; };
 		C8687CBC204F290100D44741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8687CBB204F290100D44741 /* AppDelegate.swift */; };
 		C8687CC1204F290100D44741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8687CBF204F290100D44741 /* Main.storyboard */; };
 		C8687CC3204F290100D44741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8687CC2204F290100D44741 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		C85C3DFF208BC94100EBA1A6 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		C85C3E01208BCA9D00EBA1A6 /* DetailedCharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedCharacterViewController.swift; sourceTree = "<group>"; };
 		C85C3E03208BCC1E00EBA1A6 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		C85C3E06208E681700EBA1A6 /* Super Mario World Text Box.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario World Text Box.ttf"; sourceTree = "<group>"; };
 		C8687CB8204F290100D44741 /* RPG DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPG DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8687CBB204F290100D44741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8687CC0204F290100D44741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		C85C3E05208E67F700EBA1A6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C85C3E06208E681700EBA1A6 /* Super Mario World Text Box.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		C8687CAF204F290100D44741 = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		C8687CBA204F290100D44741 /* RPG DB */ = {
 			isa = PBXGroup;
 			children = (
+				C85C3E05208E67F700EBA1A6 /* Fonts */,
 				C85C3DF7208BC82700EBA1A6 /* Services */,
 				C85C3DF6208BC82100EBA1A6 /* Views */,
 				C85C3DF5208BC81D00EBA1A6 /* Models */,
@@ -170,6 +181,7 @@
 				C8687CC6204F290100D44741 /* LaunchScreen.storyboard in Resources */,
 				C8687CC3204F290100D44741 /* Assets.xcassets in Resources */,
 				C8687CC1204F290100D44741 /* Main.storyboard in Resources */,
+				C85C3E07208E681800EBA1A6 /* Super Mario World Text Box.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
