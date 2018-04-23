@@ -15,11 +15,11 @@
 		C85C3E04208BCC1E00EBA1A6 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C3E03208BCC1E00EBA1A6 /* Character.swift */; };
 		C85C3E07208E681800EBA1A6 /* Super Mario World Text Box.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C85C3E06208E681700EBA1A6 /* Super Mario World Text Box.ttf */; };
 		C85C3E09208E693700EBA1A6 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85C3E08208E693700EBA1A6 /* SplashViewController.swift */; };
-		C85C3E0B208E69EF00EBA1A6 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C85C3E0A208E69EE00EBA1A6 /* background.mp4 */; };
 		C8687CBC204F290100D44741 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8687CBB204F290100D44741 /* AppDelegate.swift */; };
 		C8687CC1204F290100D44741 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8687CBF204F290100D44741 /* Main.storyboard */; };
 		C8687CC3204F290100D44741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8687CC2204F290100D44741 /* Assets.xcassets */; };
 		C8687CC6204F290100D44741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8687CC4204F290100D44741 /* LaunchScreen.storyboard */; };
+		C8BD4954208E74FE0012CED5 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8BD4953208E74FE0012CED5 /* background.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +32,13 @@
 		C85C3E03208BCC1E00EBA1A6 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		C85C3E06208E681700EBA1A6 /* Super Mario World Text Box.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Super Mario World Text Box.ttf"; sourceTree = "<group>"; };
 		C85C3E08208E693700EBA1A6 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		C85C3E0A208E69EE00EBA1A6 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		C8687CB8204F290100D44741 /* RPG DB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RPG DB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8687CBB204F290100D44741 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8687CC0204F290100D44741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8687CC2204F290100D44741 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8687CC5204F290100D44741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8687CC7204F290100D44741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BD4953208E74FE0012CED5 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
 		C9BD527EEC452EF1E2524138 /* Pods-RPG DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPG DB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPG DB/Pods-RPG DB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +134,7 @@
 				C8687CBB204F290100D44741 /* AppDelegate.swift */,
 				C8687CBF204F290100D44741 /* Main.storyboard */,
 				C8687CC2204F290100D44741 /* Assets.xcassets */,
-				C85C3E0A208E69EE00EBA1A6 /* background.mp4 */,
+				C8BD4953208E74FE0012CED5 /* background.mp4 */,
 				C8687CC4204F290100D44741 /* LaunchScreen.storyboard */,
 				C8687CC7204F290100D44741 /* Info.plist */,
 			);
@@ -161,7 +161,6 @@
 				C8687CB5204F290100D44741 /* Frameworks */,
 				C8687CB6204F290100D44741 /* Resources */,
 				96E4D38B646E554E66824313 /* [CP] Embed Pods Frameworks */,
-				29AC217E008274361EB998A4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -212,7 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8687CC6204F290100D44741 /* LaunchScreen.storyboard in Resources */,
-				C85C3E0B208E69EF00EBA1A6 /* background.mp4 in Resources */,
+				C8BD4954208E74FE0012CED5 /* background.mp4 in Resources */,
 				C8687CC3204F290100D44741 /* Assets.xcassets in Resources */,
 				C8687CC1204F290100D44741 /* Main.storyboard in Resources */,
 				C85C3E07208E681800EBA1A6 /* Super Mario World Text Box.ttf in Resources */,
@@ -222,21 +221,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		29AC217E008274361EB998A4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPG DB/Pods-RPG DB-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5B621AF4CE1DEE3E16D13559 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

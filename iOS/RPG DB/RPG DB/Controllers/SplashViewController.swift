@@ -11,6 +11,8 @@ import SwiftVideoBackground
 
 class SplashViewController: UIViewController {
 
+    @IBOutlet weak var startButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,21 @@ class SplashViewController: UIViewController {
                 darkness: 0.25,
                 willLoopVideo: true,
                 setAudioSessionAmbient: true)
+        
+        blinkButton()
     }
-
+    
+    func blinkButton(){
+        UIButton.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            self.startButton.alpha = 0.0
+        }, completion: {
+            (value: Bool) in
+            UIButton.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+                self.startButton.alpha = 0.75
+            }, completion: {
+                (value: Bool) in
+                self.blinkButton()
+            })
+        })
+    }
 }

@@ -24,42 +24,62 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RPG Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amo-hy-0nj">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RPG Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amo-hy-0nj">
                                 <rect key="frame" x="16" y="119" width="343" height="86"/>
+                                <color key="backgroundColor" red="0.82069705310880825" green="0.82069705310880825" blue="0.82069705310880825" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="QFf-vp-Yz5"/>
+                                    <constraint firstAttribute="height" constant="86" id="rg0-fT-W2B"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Super-Mario-World-Text-Box" family="Super Mario World Text Box" pointSize="40"/>
-                                <color key="textColor" red="0.070588235289999995" green="0.38823529410000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.1235970502981828" green="0.55631080952329692" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-t2-9ch">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-t2-9ch">
                                 <rect key="frame" x="16" y="590" width="343" height="57"/>
+                                <color key="backgroundColor" red="0.82069705309999996" green="0.82069705309999996" blue="0.82069705309999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="6Xc-Yf-AWn"/>
+                                    <constraint firstAttribute="height" constant="57" id="yfS-lZ-5ov"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Super-Mario-World-Text-Box" family="Super Mario World Text Box" pointSize="17"/>
-                                <state key="normal" title="CLICK TO START"/>
+                                <state key="normal" title="CLICK TO START">
+                                    <color key="titleColor" red="0.1235970503" green="0.5563108095" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <segue destination="aAO-um-7UQ" kind="show" id="Lbu-Sc-N8p"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By: PQL INJECTION" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-Ap-HIZ">
+                                <rect key="frame" x="16" y="213" width="343" height="32"/>
+                                <color key="backgroundColor" red="0.82069705309999996" green="0.82069705309999996" blue="0.82069705309999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="rMQ-fM-0vg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Super-Mario-World-Text-Box" family="Super Mario World Text Box" pointSize="10"/>
+                                <color key="textColor" red="0.1235970503" green="0.5563108095" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DhQ-1j-ljG"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J3X-ca-yh1"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="dEE-jU-yTv"/>
-                            <constraint firstAttribute="bottom" secondItem="AQn-t2-9ch" secondAttribute="bottom" constant="20" symbolic="YES" id="eD2-Cn-zvm"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="AQn-t2-9ch" secondAttribute="trailing" id="eky-gs-pwA"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="AQn-t2-9ch" secondAttribute="leading" id="o6l-tS-N1C"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3FU-HQ-6kY"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="BQq-Ap-HIZ" secondAttribute="leading" id="8eD-A5-z1q"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="BQq-Ap-HIZ" secondAttribute="trailing" id="Ift-7W-OEc"/>
+                            <constraint firstItem="BQq-Ap-HIZ" firstAttribute="top" secondItem="Amo-hy-0nj" secondAttribute="bottom" constant="8" symbolic="YES" id="Lcd-Ld-Vql"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="OTG-t1-Mwi"/>
+                            <constraint firstItem="BQq-Ap-HIZ" firstAttribute="trailing" secondItem="AQn-t2-9ch" secondAttribute="trailing" id="Uh0-oI-q74"/>
+                            <constraint firstItem="BQq-Ap-HIZ" firstAttribute="leading" secondItem="AQn-t2-9ch" secondAttribute="leading" id="ZpU-2j-P3z"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lf6-U9-edj"/>
+                            <constraint firstAttribute="bottom" secondItem="AQn-t2-9ch" secondAttribute="bottom" constant="20" symbolic="YES" id="rmZ-9Q-1KE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="AQn-t2-9ch" id="V5X-7h-Htj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="591" y="132"/>
+            <point key="canvasLocation" x="589.60000000000002" y="131.78410794602701"/>
         </scene>
         <!--Main Table View Controller-->
         <scene sceneID="Ugg-SE-P2r">
