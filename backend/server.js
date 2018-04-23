@@ -182,8 +182,12 @@ client.query(logger(sql), (err, response) => {
 });
 });
 
-var server = app.listen(3000, function() {
-    console.log('Express is listening to http://localhost:3000');
+var server = app.listen(process.env.PORT || 5000, function() {
+	if(process.env.PORT != null) {
+		console.log('Express is listening to ' + process.env.PORT);
+	} else {
+		console.log('Express is listening to http://localhost:3000');
+	}
 });
 
 function logger(data){
