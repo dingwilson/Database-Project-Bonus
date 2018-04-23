@@ -11,15 +11,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HiraginoMincho.ttc">
-            <string>HiraMinProN-W6</string>
+        <array key="Super Mario World Text Box.ttf">
+            <string>Super-Mario-World-Text-Box</string>
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashViewController" customModule="RPG_DB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,18 +27,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RPG Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Amo-hy-0nj">
                                 <rect key="frame" x="16" y="119" width="343" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="86" id="hkL-sI-Ea8"/>
+                                    <constraint firstAttribute="height" constant="86" id="QFf-vp-Yz5"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="40"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Super-Mario-World-Text-Box" family="Super Mario World Text Box" pointSize="40"/>
+                                <color key="textColor" red="0.070588235289999995" green="0.38823529410000002" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQn-t2-9ch">
                                 <rect key="frame" x="16" y="590" width="343" height="57"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="jWJ-ey-fvC"/>
+                                    <constraint firstAttribute="height" constant="57" id="6Xc-Yf-AWn"/>
                                 </constraints>
-                                <state key="normal" title="Click to Start  &gt;&gt;"/>
+                                <fontDescription key="fontDescription" name="Super-Mario-World-Text-Box" family="Super Mario World Text Box" pointSize="17"/>
+                                <state key="normal" title="CLICK TO START"/>
                                 <connections>
                                     <segue destination="aAO-um-7UQ" kind="show" id="Lbu-Sc-N8p"/>
                                 </connections>
@@ -46,12 +47,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="AQn-t2-9ch" secondAttribute="bottom" constant="20" symbolic="YES" id="Aj9-Ni-riM"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="AQn-t2-9ch" secondAttribute="leading" id="K93-oz-Iml"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eIY-Xf-9zX"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="AQn-t2-9ch" secondAttribute="trailing" id="gqb-hn-NJp"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="m8W-jT-YdH"/>
-                            <constraint firstItem="Amo-hy-0nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="q7s-yQ-jkP"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="DhQ-1j-ljG"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="J3X-ca-yh1"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="dEE-jU-yTv"/>
+                            <constraint firstAttribute="bottom" secondItem="AQn-t2-9ch" secondAttribute="bottom" constant="20" symbolic="YES" id="eD2-Cn-zvm"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="trailing" secondItem="AQn-t2-9ch" secondAttribute="trailing" id="eky-gs-pwA"/>
+                            <constraint firstItem="Amo-hy-0nj" firstAttribute="leading" secondItem="AQn-t2-9ch" secondAttribute="leading" id="o6l-tS-N1C"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

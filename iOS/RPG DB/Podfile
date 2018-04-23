@@ -6,5 +6,6 @@ target 'RPG DB' do
   use_frameworks!
 
   # Pods for RPG DB
+  pod 'SwiftVideoBackground'
 
 end
