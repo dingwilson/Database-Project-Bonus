@@ -34,7 +34,7 @@ class DetailedCharacterViewController: UIViewController {
         
         name.text = currentCharacter.charName
         level.text = "Lvl: \(currentCharacter.charLevel)"
-        race.text = "Race: \(currentCharacter.raceID)"
+        race.text = "Race: \(currentCharacter.raceID.uppercased())"
         charClass.text = "Class: \(currentCharacter.classID)"
         
         if (currentCharacter.sex) {

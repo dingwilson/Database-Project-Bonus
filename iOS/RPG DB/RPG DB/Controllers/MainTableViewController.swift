@@ -35,6 +35,8 @@ class MainTableViewController: UITableViewController {
             }
         }
         
+        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+        
         self.tableView.rowHeight = 70
     }
     
@@ -44,11 +46,6 @@ class MainTableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -65,7 +62,7 @@ class MainTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterTableViewCell
         
         cell.charName?.text = characterList[indexPath.row].charName
-        cell.charRace?.text = "\(characterList[indexPath.row].raceID): \(characterList[indexPath.row].classID)"
+        cell.charRace?.text = "\(characterList[indexPath.row].raceID.uppercased()): \(characterList[indexPath.row].classID)"
         
         switch characterList[indexPath.row].raceID {
         case "Gnomes":
@@ -119,6 +116,8 @@ class MainTableViewController: UITableViewController {
                 cell.backgroundColor = UIColor.red
             } else if currentCharacterFightValue < fightValue {
                 cell.backgroundColor = UIColor.green
+            } else {
+                cell.backgroundColor = UIColor.clear
             }
         }
         
