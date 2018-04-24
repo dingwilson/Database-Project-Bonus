@@ -29,6 +29,7 @@ class DetailedCharacterViewController: UIViewController {
     @IBOutlet weak var mana: UILabel!
     
     @IBOutlet weak var spellsTableView: UITableView!
+    @IBOutlet weak var backgroundLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +52,7 @@ class DetailedCharacterViewController: UIViewController {
             sex.text = "Female"
         }
         
-        weight.text = "MASS: \(currentCharacter.weight)"
+        weight.text = "PACK: \(currentCharacter.weight)/150"
         strength.text = "STR: \(currentCharacter.strength)"
         defense.text = "DEF: \(currentCharacter.defense)"
         speed.text = "SPD: \(currentCharacter.speed)"
@@ -61,36 +62,47 @@ class DetailedCharacterViewController: UIViewController {
         switch currentCharacter.raceID {
         case "Gnomes":
             image.image = UIImage(named: "gnome")
+            backgroundLabel.backgroundColor = UIColor.purple
             break
         case "Halflings":
             image.image = UIImage(named: "halfling")
+            backgroundLabel.backgroundColor = UIColor.red
             break
         case "Centaurs":
             image.image = UIImage(named: "centaur")
+            backgroundLabel.backgroundColor = UIColor.blue
             break
         case "Lizard":
             image.image = UIImage(named: "lizard")
+            backgroundLabel.backgroundColor = UIColor.green
             break
         case "Goblins":
             image.image = UIImage(named: "goblin")
+            backgroundLabel.backgroundColor = UIColor.yellow
             break
         case "Kobolds":
             image.image = UIImage(named: "kobold")
+            backgroundLabel.backgroundColor = UIColor.magenta
             break
         case "Trolls":
             image.image = UIImage(named: "troll")
+            backgroundLabel.backgroundColor = UIColor.cyan
             break
         case "Giant":
             image.image = UIImage(named: "giant")
+            backgroundLabel.backgroundColor = UIColor.orange
             break
         case "Gnolls":
             image.image = UIImage(named: "gnoll")
+            backgroundLabel.backgroundColor = UIColor.gray
             break
         case "Argonian":
             image.image = UIImage(named: "argonian")
+            backgroundLabel.backgroundColor = UIColor.darkGray
             break
         case "hobbit":
             image.image = UIImage(named: "hobbit")
+            backgroundLabel.backgroundColor = UIColor.white
             break
         default:
             break
