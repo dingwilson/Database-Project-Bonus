@@ -4,7 +4,7 @@ To run server:
 >node server.js
 
 Heroku Instance:
-[https://database-backend-ayy-lmao.herokuapp.com/]
+[https://database-backend-ayy-lmao.herokuapp.com/](https://database-backend-ayy-lmao.herokuapp.com/)
 
 ### Avaliable Endpoints
 
