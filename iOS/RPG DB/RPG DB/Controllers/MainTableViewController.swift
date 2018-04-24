@@ -37,6 +37,14 @@ class MainTableViewController: UITableViewController {
         
         self.tableView.rowHeight = 70
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -99,6 +107,22 @@ class MainTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let fightValue = UserDefaults.standard.double(forKey: "fight")
+        
+        if (fightValue != -1.0) {
+            let currentCharacterFightValue = characterList[indexPath.row].strength + characterList[indexPath.row].defense
+            
+            if currentCharacterFightValue > fightValue {
+                cell.backgroundColor = UIColor.red
+            } else if currentCharacterFightValue < fightValue {
+                cell.backgroundColor = UIColor.green
+            }
+        }
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

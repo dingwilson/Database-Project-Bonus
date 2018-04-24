@@ -13,6 +13,11 @@ class SplashViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UserDefaults.standard.set(-1.0, forKey: "fight")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -35,11 +40,11 @@ class SplashViewController: UIViewController {
     }
     
     func blinkButton(){
-        UIButton.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIButton.animate(withDuration: 0.1, delay: 1.25, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             self.startButton.alpha = 0.0
         }, completion: {
             (value: Bool) in
-            UIButton.animate(withDuration: 1.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            UIButton.animate(withDuration: 0.1, delay: 0.6, options: UIViewAnimationOptions.curveEaseInOut, animations: {
                 self.startButton.alpha = 0.75
             }, completion: {
                 (value: Bool) in
