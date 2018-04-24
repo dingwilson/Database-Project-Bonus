@@ -7,5 +7,6 @@ target 'RPG DB' do
 
   # Pods for RPG DB
   pod 'SwiftVideoBackground'
+  pod 'Alamofire'
 
 end
