@@ -1,12 +1,22 @@
 # Database Project Bonus
 
-To run server:
+### To run frontend:
+
+Install cocoapods, then run:
+
+```bash
+pod install
+```
+
+Open the generated `.xcworkspace` file and run.
+
+### To run server:
 >node server.js
 
 Heroku Instance:
 [https://database-backend-ayy-lmao.herokuapp.com/](https://database-backend-ayy-lmao.herokuapp.com/)
 
-### Avaliable Endpoints
+## Avaliable Endpoints
 
 '/items' - returns all items
 
