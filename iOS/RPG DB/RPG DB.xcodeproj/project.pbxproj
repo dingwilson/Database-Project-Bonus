@@ -19,6 +19,7 @@
 		C8687CC3204F290100D44741 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8687CC2204F290100D44741 /* Assets.xcassets */; };
 		C8687CC6204F290100D44741 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8687CC4204F290100D44741 /* LaunchScreen.storyboard */; };
 		C8BD4954208E74FE0012CED5 /* background.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C8BD4953208E74FE0012CED5 /* background.mp4 */; };
+		C8BD4959208FB4180012CED5 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BD4958208FB4180012CED5 /* Spell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C8687CC5204F290100D44741 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8687CC7204F290100D44741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8BD4953208E74FE0012CED5 /* background.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = background.mp4; sourceTree = "<group>"; };
+		C8BD4958208FB4180012CED5 /* Spell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
 		C9BD527EEC452EF1E2524138 /* Pods-RPG DB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPG DB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPG DB/Pods-RPG DB.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				C85C3E03208BCC1E00EBA1A6 /* Character.swift */,
+				C8BD4958208FB4180012CED5 /* Spell.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BD4959208FB4180012CED5 /* Spell.swift in Sources */,
 				C85C3DF9208BC83B00EBA1A6 /* MainTableViewController.swift in Sources */,
 				C8687CBC204F290100D44741 /* AppDelegate.swift in Sources */,
 				C85C3E04208BCC1E00EBA1A6 /* Character.swift in Sources */,

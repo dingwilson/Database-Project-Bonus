@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailedCharacterViewController: UIViewController {
     
     var character : CharacterElement?
+    
+    var spellList : [SpellElement] = []
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var name: UILabel!
@@ -25,8 +28,13 @@ class DetailedCharacterViewController: UIViewController {
     @IBOutlet weak var hitpoints: UILabel!
     @IBOutlet weak var mana: UILabel!
     
+    @IBOutlet weak var spellsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        spellsTableView.delegate = self
+        spellsTableView.dataSource = self
 
         guard let currentCharacter = character else {
             return
@@ -88,6 +96,23 @@ class DetailedCharacterViewController: UIViewController {
             break
             
         }
+        
+        Alamofire.request("https://database-backend-ayy-lmao.herokuapp.com/spells/class/\(Int(arc4random_uniform(11) + 1))").responseJSON { response in
+            if let data = response.data {
+                do {
+                    let jsonDecoder = JSONDecoder()
+                    let spells = try jsonDecoder.decode(Spell.self, from: data)
+
+                    self.spellList = spells
+                    
+                    DispatchQueue.main.async {
+                        self.spellsTableView.reloadData()
+                    }
+                } catch let parseError as NSError {
+                    print("JSON Error \(parseError.localizedDescription)")
+                }
+            }
+        }
     }
 
 
@@ -99,4 +124,22 @@ class DetailedCharacterViewController: UIViewController {
         UserDefaults.standard.set(currentCharacter.defense + currentCharacter.strength, forKey: "fight")
     }
     
+}
+
+extension DetailedCharacterViewController : UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return spellList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        cell.textLabel?.text = spellList[indexPath.row].spellName
+        
+        return cell
+    }
 }
