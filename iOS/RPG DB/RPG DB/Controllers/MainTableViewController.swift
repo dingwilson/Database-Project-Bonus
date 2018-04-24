@@ -12,6 +12,8 @@ import Alamofire
 class MainTableViewController: UITableViewController {
     
     var characterList : [CharacterElement] = []
+    
+    var selectedCharacter = -1;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +34,8 @@ class MainTableViewController: UITableViewController {
                 }
             }
         }
+        
+        self.tableView.rowHeight = 70
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,54 +54,65 @@ class MainTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = characterList[indexPath.row].charName
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CharacterTableViewCell
+        
+        cell.charName?.text = characterList[indexPath.row].charName
+        cell.charRace?.text = "\(characterList[indexPath.row].raceID): \(characterList[indexPath.row].classID)"
+        
+        switch characterList[indexPath.row].raceID {
+        case "Gnomes":
+            cell.charPicture?.image = UIImage(named: "gnome")
+            break
+        case "Halflings":
+            cell.charPicture?.image = UIImage(named: "halfling")
+            break
+        case "Centaurs":
+            cell.charPicture?.image = UIImage(named: "centaur")
+            break
+        case "Lizard":
+            cell.charPicture?.image = UIImage(named: "lizard")
+            break
+        case "Goblins":
+            cell.charPicture?.image = UIImage(named: "goblin")
+            break
+        case "Kobolds":
+            cell.charPicture?.image = UIImage(named: "kobold")
+            break
+        case "Trolls":
+            cell.charPicture?.image = UIImage(named: "troll")
+            break
+        case "Giant":
+            cell.charPicture?.image = UIImage(named: "giant")
+            break
+        case "Gnolls":
+            cell.charPicture?.image = UIImage(named: "gnoll")
+            break
+        case "Argonian":
+            cell.charPicture?.image = UIImage(named: "argonian")
+            break
+        case "hobbit":
+            cell.charPicture?.image = UIImage(named: "hobbit")
+            break
+        default:
+            break
+            
+        }
+        
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedCharacter = indexPath.row
+        performSegue(withIdentifier: "segueToDetail", sender: self)
     }
-    */
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let detailVC = segue.destination as? DetailedCharacterViewController {
+            detailVC.character = self.characterList[selectedCharacter]
+        }
     }
-    */
 
 }
