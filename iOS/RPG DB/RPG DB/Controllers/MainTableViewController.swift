@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import Alamofire
 
 class MainTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Alamofire.request("https://database-backend-ayy-lmao.herokuapp.com/characters").responseJSON { response in
+            if let data = response.data, let utf8Text = String(data: data, encoding: .utf8) {
+                do {
+                    print(utf8Text)
+                    
+                    let jsonDecoder = JSONDecoder()
+                    let responseModel = try jsonDecoder.decode(Character.self, from: data)
+
+                    print(responseModel)
+                } catch let parseError as NSError {
+                    print("JSON Error \(parseError.localizedDescription)")
+                }
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

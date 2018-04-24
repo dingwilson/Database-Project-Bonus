@@ -13,19 +13,25 @@ class SplashViewController: UIViewController {
 
     @IBOutlet weak var startButton: UIButton!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         try? VideoBackground.shared.play(
-                view: view,
-                videoName: "background",
-                videoType: "mp4",
-                isMuted: true,
-                darkness: 0.25,
-                willLoopVideo: true,
-                setAudioSessionAmbient: true)
+            view: view,
+            videoName: "background",
+            videoType: "mp4",
+            isMuted: true,
+            darkness: 0.25,
+            willLoopVideo: true,
+            setAudioSessionAmbient: true)
         
         blinkButton()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        VideoBackground.shared.pause()
+        
+        super.viewDidDisappear(animated)
     }
     
     func blinkButton(){
