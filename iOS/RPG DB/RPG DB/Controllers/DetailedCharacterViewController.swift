@@ -51,10 +51,10 @@ class DetailedCharacterViewController: UIViewController {
             sex.text = "Female"
         }
         
-        weight.text = "Weight: \(currentCharacter.weight)"
+        weight.text = "MASS: \(currentCharacter.weight)"
         strength.text = "STR: \(currentCharacter.strength)"
         defense.text = "DEF: \(currentCharacter.defense)"
-        speed.text = "Speed: \(currentCharacter.speed)"
+        speed.text = "SPD: \(currentCharacter.speed)"
         hitpoints.text = "HP: \(currentCharacter.hitPoints)/\(currentCharacter.hitPoints)"
         mana.text = "MP: \(currentCharacter.mana)/\(currentCharacter.mana)"
         
